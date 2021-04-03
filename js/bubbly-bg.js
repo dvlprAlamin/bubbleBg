@@ -34,10 +34,10 @@ const circles = [],
         '#607d8b'
     ],
     minSize = 0.5,                                        // the minimum size of the circles in px
-    maxSize = 3,                                       // the maximum size of the circles in px
-    numCircles = 500,                                   // the number of circles
+    maxSize = 2.5,                                       // the maximum size of the circles in px
+    numCircles = 400,                                   // the number of circles
     minSpeed = -3,                                     // the minimum speed, recommended: -maxspeed
-    maxSpeed = 3;                                    // the maximum speed of the circles
+    maxSpeed = 2;                                    // the maximum speed of the circles
     let expandState = true;                                      // the direction of expansion
 
 const buildArray = () => {
