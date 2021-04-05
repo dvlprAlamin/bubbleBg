@@ -31,26 +31,27 @@ const circles = [],
         '#ff5722',
         '#795548',
         '#9e9e9e',
-        '#607d8b'
+        '#607d8b',
+        '#ffffff'
     ],
     minSize = 0.5,                                        // the minimum size of the circles in px
     maxSize = 2.5,                                       // the maximum size of the circles in px
-    numCircles = 400,                                   // the number of circles
+    numCircles = 200,                                   // the number of circles
     minSpeed = -3,                                     // the minimum speed, recommended: -maxspeed
-    maxSpeed = 2;                                    // the maximum speed of the circles
-    let expandState = true;                                      // the direction of expansion
+    maxSpeed = 1.5;                                    // the maximum speed of the circles
+let expandState = true;                                      // the direction of expansion
 
 const buildArray = () => {
 
 
     for (let i = 0; i < numCircles; i++) {
         let color = Math.floor(Math.random() * (colors.length - 1 + 1)) + 1;
-           let left = Math.floor(Math.random() * (canvas.width - 0 + 1)) + 0;
-           let top = Math.floor(Math.random() * (canvas.height - 0 + 1)) + 0;
-           let size = Math.floor(Math.random() * (maxSize - minSize + 1)) + minSize;
-            let leftSpeed = (Math.floor(Math.random() * (maxSpeed - minSpeed + 1)) + minSpeed) / 10;
-           let topSpeed = (Math.floor(Math.random() * (maxSpeed - minSpeed + 1)) + minSpeed) / 10;
-            var expandState;
+        let left = Math.floor(Math.random() * (canvas.width - 0 + 1)) + 0;
+        let top = Math.floor(Math.random() * (canvas.height - 0 + 1)) + 0;
+        let size = Math.floor(Math.random() * (maxSize - minSize + 1)) + minSize;
+        let leftSpeed = (Math.floor(Math.random() * (maxSpeed - minSpeed + 1)) + minSpeed) / 10;
+        let topSpeed = (Math.floor(Math.random() * (maxSpeed - minSpeed + 1)) + minSpeed) / 10;
+        var expandState;
 
         while (leftSpeed === 0 || topSpeed === 0) {
             leftSpeed = (Math.floor(Math.random() * (maxSpeed - minSpeed + 1)) + minSpeed) / 10,
